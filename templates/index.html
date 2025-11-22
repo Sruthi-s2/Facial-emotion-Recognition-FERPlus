@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Facial Emotion Recognition</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            width: 420px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 26px;
+            color: #2b2d42;
+        }
+
+        .file-input {
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            padding: 8px;
+            font-size: 15px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            background-color: #357ac9;
+        }
+
+        .preview-img {
+            margin-top: 20px;
+            width: 260px;
+            height: 260px;
+            object-fit: cover;       /* AUTO CROP */
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .prediction-box {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Facial Emotion Recognition</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="file-input">
+            <input type="file" name="file" required>
+        </div>
+
+        <button class="btn" type="submit">Upload & Predict</button>
+    </form>
+
+    {% if filename %}
+        <div class="prediction-box">
+            Prediction: {{ prediction }}
+        </div>
+
+        <img src="{{ url_for('static', filename=filename) }}" class="preview-img">
+    {% endif %}
+</div>
+
+</body>
+</html>

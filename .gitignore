@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+
+# Virtual environment
+venv/
+fer_env/
+
+# Dataset and large files
+*.zip
+
+archive*/
+
+# OS specific
+.DS_Store
+
+# IDE/editor
+.vscode/
+.idea/
