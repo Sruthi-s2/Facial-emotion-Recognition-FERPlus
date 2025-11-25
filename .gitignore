@@ -20,3 +20,7 @@ archive*/
 # IDE/editor
 .vscode/
 .idea/
+
+*.pptx
+*.mp4
+*.mov
