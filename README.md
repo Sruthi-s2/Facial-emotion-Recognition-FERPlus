@@ -1,9 +1,10 @@
-
-
-
-
-
 # FERPlus-CNN: Facial Emotion Classification Web App
+
+## Web App 
+
+Prediction Example Homepage:
+
+![FERPlus-CNN Prediction](screenshots/webapp_ferplus.png)
 
 ## Overview
 This project implements a **Facial Emotion Recognition (FER)** web application using a **CNN-based model** trained on the **FERPlus dataset**. Users can upload an image, and the app predicts the facial emotion present in the image.
