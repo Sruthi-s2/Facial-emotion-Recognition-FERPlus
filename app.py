@@ -22,7 +22,7 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades +
 def predict_emotion(img_path):
     img = cv2.imread(img_path)
     if img is None:
-        return "Invalid image"
+        return "Invalid image file"
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.1, 5)
